@@ -20,7 +20,8 @@ export default class Clock extends React.Component {
       seconds: {
         created: new Date().getSeconds()
       },
-      lists: []
+      lists: [],
+      darkMode: false
     }
     this.date = '31/03/2024'
   }
@@ -34,6 +35,19 @@ export default class Clock extends React.Component {
     )
   }
 
+  componentDidUpdate() {
+    if (this.state.darkMode) {
+      document.body.style.background = '#000'
+      document.body.style.color = '#fff'
+    }
+  }
+
+  toggleDarkMode = () => {
+    this.setState((prevState) => ({
+      ...prevState,
+      darkMode: !prevState.darkMode
+    }))
+  }
   getTime = () => {
     const newState = {
       ...this.state,
@@ -52,6 +66,8 @@ export default class Clock extends React.Component {
         <h2>It's {this.state.time.created}</h2>
         <h2>It's {this.date}</h2>
         <button onClick={this.getTime}>Get Time</button>
+        <button onClick={this.toggleDarkMode}>Dark Theme</button>
+        {this.state.darkMode && <input value={this.state.darkMode} />}
       </div>
     )
   }
