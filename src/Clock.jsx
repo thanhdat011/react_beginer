@@ -1,5 +1,15 @@
 import React from 'react'
 
+const lists = ['BMW', 'Mec', 'Honda']
+
+const fetchApi = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(lists)
+    }, 1000)
+  })
+}
+
 export default class Clock extends React.Component {
   constructor(props) {
     super(props)
@@ -9,9 +19,19 @@ export default class Clock extends React.Component {
       },
       seconds: {
         created: new Date().getSeconds()
-      }
+      },
+      lists: []
     }
     this.date = '31/03/2024'
+  }
+
+  componentDidMount() {
+    fetchApi().then((res) =>
+      this.setState((prevState) => ({
+        ...prevState,
+        lists: res
+      }))
+    )
   }
 
   getTime = () => {
@@ -25,6 +45,7 @@ export default class Clock extends React.Component {
     this.setState(newState)
   }
   render() {
+    console.log(this.state)
     return (
       <div>
         <h1>Hello, world!</h1>
