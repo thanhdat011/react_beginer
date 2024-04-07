@@ -4,15 +4,17 @@ import Clock from './Clock'
 import BareInput from './BareInput'
 import Layout from './Layout'
 import BareButton from './BareButton'
+import LoginControl from './LoginControl'
 
 function App() {
   return (
     <div className='App'>
-      <Layout>
+      {/* <Layout>
         <h1>Hello</h1>
         <BareInput type='text' className='test' value='100' onChange={() => {}} />
       </Layout>
-      <BareButton />
+      <BareButton /> */}
+      <LoginControl hidden={false} />
     </div>
   )
 }
