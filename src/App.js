@@ -5,6 +5,8 @@ import BareInput from './BareInput'
 import Layout from './Layout'
 import BareButton from './BareButton'
 import LoginControl from './LoginControl'
+import CorrectlyState from './CorrectlyState'
+import ProductList from './ProductList/ProductList'
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
         <BareInput type='text' className='test' value='100' onChange={() => {}} />
       </Layout>
       <BareButton /> */}
-      <LoginControl hidden={false} />
+      {/* <LoginControl hidden={false} /> */}
+      {/* <CorrectlyState /> */}
+      <ProductList />
     </div>
   )
 }
