@@ -7,6 +7,7 @@ import BareButton from './BareButton'
 import LoginControl from './LoginControl'
 import CorrectlyState from './CorrectlyState'
 import ProductList from './ProductList/ProductList'
+import Form from './Form/Form'
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       <BareButton /> */}
       {/* <LoginControl hidden={false} /> */}
       {/* <CorrectlyState /> */}
-      <ProductList />
+      {/* <ProductList /> */}
+      <Form />
     </div>
   )
 }
