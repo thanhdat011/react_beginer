@@ -8,6 +8,7 @@ import LoginControl from './LoginControl'
 import CorrectlyState from './CorrectlyState'
 import ProductList from './ProductList/ProductList'
 import Form from './Form/Form'
+import UncontrolComponent from './Form/UncontrolComponent'
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       {/* <LoginControl hidden={false} /> */}
       {/* <CorrectlyState /> */}
       {/* <ProductList /> */}
-      <Form />
+      {/* <Form /> */}
+      <UncontrolComponent />
     </div>
   )
 }
