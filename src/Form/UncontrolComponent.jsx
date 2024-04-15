@@ -15,7 +15,7 @@ export class UncontrolComponent extends Component {
     console.log(this.input)
 
     const formData = new FormData()
-    formData.append('myFile', this.state.selectedFile, this.state.selectedFile.name)
+    formData.append('myFile', this.state.selectedFile, this.state.selectedFile.namez)
   }
   handleFileChange = (e) => {
     this.setState({

@@ -9,6 +9,7 @@ import CorrectlyState from './CorrectlyState'
 import ProductList from './ProductList/ProductList'
 import Form from './Form/Form'
 import UncontrolComponent from './Form/UncontrolComponent'
+import Calculator from './Calculator/Calculator'
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
       {/* <CorrectlyState /> */}
       {/* <ProductList /> */}
       {/* <Form /> */}
-      <UncontrolComponent />
+      {/* <UncontrolComponent /> */}
+      <Calculator />
     </div>
   )
 }
